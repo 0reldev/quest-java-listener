@@ -10,12 +10,10 @@ public class Transactions {
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
+
                 account.setTotal(account.getTotal() - value);
                 status.onComplete(account);
             }
         }, time);
-
-
-
     }
 }
